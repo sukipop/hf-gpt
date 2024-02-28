@@ -5,12 +5,12 @@ input_text = "Good morning."
 prompt = ""
 
 if system_prompt:
-    prompt += f"((start))system\n{system_prompt}((end))\n"
+    prompt += f"<|im_start|>system\n{system_prompt}<|im_end|>\n"
 
 if input_text:
-    prompt += f"((start))user\n{input_text}((end))\n"
+    prompt += f"<|im_start|>user\n{input_text}<|im_end|>\n"
 
-prompt += "((start))assistant\n"
+prompt += "<|im_start|>assistant\n"
 
 # Display the crafted prompt to ensure it's shipshape
 print(prompt)
