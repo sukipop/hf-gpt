@@ -19,7 +19,7 @@ def query(api_url, payload):
 
 # Define your command line interface using Click
 @click.command()
-@click.option('--model', default='openai-community/gpt2', help='Model ID to use for generation.')
+@click.option('--model', default='NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO', help='Model ID to use for generation.')
 @click.argument('text')
 def generate(model, text):
     """Generate text using the specified model."""
